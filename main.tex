@@ -390,6 +390,7 @@
 				Potenslængden på mængden med $i$ elementer vil være $2^i$
 			\subsection{Karteisisk produkt}
 				To mængders kartesiske produkt er en mængde bestående af 2 elementer fra hver mængde. Længden på 2 elementer kaldes også 2-tupler\\
+				Ikke kommunativ ($A\times B \neq B\times A$)\\
 				\begin{align*}
 					A=\{1,2\}, B=\{2,3\}\\
 					A\times B = \{(1,2),(1,3),(2,2),(2,3)\}\\
@@ -523,6 +524,7 @@
 					Isolering af x.\\
 					Ved afbilledring vil akserne byttes rundt\\
 					Ikke det samme som $f^{-1}$ som er bare $\frac{1}{f(x)}$\\
+					Hvis et punkt i funktionen $f^{-1}$ ikke er defineret er funktionen ikke defineret\\
 					Ved afbilledring vil akserne byttes rundt
 				\subsection{Operationer på funktioner}
 					Her vil blot de funtkioerne indsættes med parentes rundt om og udregnes.
@@ -537,6 +539,8 @@
 					Mængden $\mathbb{Z}$ er en tællelig mængde og beskrives ved $\aleph_0$.\\
 					Ikke tællelige mængder kaldes overtællige mængder.\\
 					Kardinaliteten kan her bruges så hvis $\mathbb{Z}$ kan mappes til en ny mængde er den tællelig.\\
+					Tællig uendelig er blot tællelig men mere specifikt\\
+					En tællelig maende krydset med en taellelig maengde giver en taellig maengde\\
 					Mængden $Q = {\frac{p}{q}|p,q\in \mathbb{Z}}$ er en tællelig mængde.\\
 					Da der blot mappes en sammenhæng hvor alle $\mathbb{Z}$ kan mappes på tæller og nævner, således alle rationelle tal kan opstå og dermed er $\aleph_0$.
 				\subsection{Overtællelige mængder}
@@ -673,7 +677,7 @@
 			\subsection{Lukninger }
 				Lukninger bruges til at gøre relationer for en given egenskab.\\
 				Følgende former for lukning vil eksemplerne tage udgangspunkt i $$R=\{(1,3),(2,2),(2,3,(3,1),(3,3)\}$$
-
+				Lukninger er de originale par og de nye lukningspar.\\
 				\subsection{Refleksive lukninger}
 					Eksempelvis. Den refleksive lukning af $R$ er $r(R)=R\cup \{(a,a)|a\in A\}$\\
 					$r(R)=R\cup \{(1,1),(4,4)\}$\\
@@ -689,7 +693,8 @@
 					Den transative lukning vil indeholde kan defineres ved \\
 					$t(R)=R^*=\bigcup\limits_{i=1}^{|A|} R^i$ Hvis $A$ er endelig\\
 					her tages fællesmængden af relationen og relationen sammensat med sig selv og relationen sammensmat med sig selv 3 gange osv.\\
-					$t(R)=R\cup \{(2,1)\}$
+					$t(R)=R\cup \{(2,1)\}$\\
+					For $R^2$ hentydes til nye par og for $R^*$ hentydes til den alle samlet par.
 			\section{Ækvivalensrelationer}
 				En ækvivalensrelation er reflekstiv, symmetrisk og transitiv.\\
 				Eks. parietet, = og den tomme relation er en ækvivalens\\
@@ -785,6 +790,8 @@
 					
 				\subsection{Total ordning}
 					Den partielle ordning for $R$ er hvor $a R b$ eller $b R a$ er gædende. Her vil $a$ og $b$ være sammenlignelige.\\
+					Dvs. at en total ordning er refleksiv, transitiv, antisymmetrisk og den givende releation er gældende for enten aRb eller bRa\\
+					Dermed en total ordning på et sæt , hvor ingen relation er angivet tages der blot udgangspunkt i transitiv, antisymmetrisk, refleksiv og at for ethvert element a og b skal a,b eller b,a optræde.\\
 					Er alle  par $a,b \in A$ er sammenlignelige med releationen $R$ er det en total ordning.
 					Eks. \\
 					$R=\{(a,b)|a\leq b\}$ på $\{1,2,3,4,5\}$ er en total ordning\\
@@ -838,9 +845,12 @@
 				For dette kan det obseveres at 
 				\begin{itemize}
 					\item $a|b \land a|c \rightarrow a|(b+c)$
-					\item $a|b\rightarrow \forall k \in \mathbb{Z} : a|k\cdot b$
+					\item $a|b\rightarrow \forall k_1,k_2\in \mathbb{Z} : a|k_1\cdot b+a\cdot k_2$
 					\item $a|b\land b|c \rightarrow a|c$
-					\item $A|b\land a|c \rightarrow \forall m,n \in \mathbb{Z}: a|(mb+nc)$
+					\item $a|b\land a|c \rightarrow \forall m,n \in \mathbb{Z}: a|(mb+nc)$
+					\item $a|bc \land gcd(a,b) = 1 \rightarrow a|c$
+					\item $a|b = a|-b$
+					\item $a|b\lor a|c\rightarrow a|bc$
 				\end{itemize}
 				\subsubsection{Bevis $a|b\land a|c \iff a|(b+c)$}
 					\begin{align*}
@@ -862,6 +872,18 @@
 				
 			\subsection{Kongruence}
 				To kongruente tal skrives som $a\equiv b (\; \; mod \; \; m)$ dvs. $m|(a-b)$\\
+				\begin{itemize}
+					\item $a\equiv b (mod \; m)\iff \exists k \in \mathbb{Z}:a=b+mk$
+					\item $a\equiv b (mod\; m) \rightarrow a\equiv b+mk (mod\;m)$
+					\item $a\equiv b (mod\; m)\rightarrow ka\equiv kb+km(mod\; m)$
+					\item $a\equiv a (mod\;m)$
+					\item $a\equiv b (mod\;m)\iff b\equiv a (mod\;m)$
+					\item $a\equiv b (mod\;m)\land b\equiv c (mod\;m)\rightarrow a\equiv c (mod\;m)$
+					\item $a\equiv b (mod\;m)\land c\equiv d (mod\;m)\rightarrow a+c\equiv b+d (mod\;m)$
+					\item $a\equiv b (mod\;m)\land c\equiv d (mod\;m)\rightarrow ac\equiv bd (mod\;m)$
+					\item $a\equiv b (mod\;m)\rightarrow a^k\equiv b^k (mod\;m)$
+					\item $a\equiv b (mod\;m)\rightarrow gcd(a,m)=gcd(b,m)$
+				\end{itemize}
 				\subsubsection{$\exists k \in \mathbb{Z}: a=b+km \iff a\equiv b (\; mod \; m)$} 
 					\begin{align*}
 						m|(a-b)\\
@@ -897,15 +919,15 @@
 				En ligning har altid en løsning hvis $gcd(a,m)=1$, og nogle gange hvis ikke det er opfyldt.\\
 				For isolering af $x$ kan den inverse til $a$ modulo $m$ bliver multipliceret på begge sider.\\
 				Den inverse er fundet ved $a\cdot \bar{a}\;(mod\;m)=1$. Eks. $3\cdot x)\;(mod\;11)$ Vil $x=4$\\
-				Dermed vil det kun være én multiplikativ invers hvis $gcd(a,m)=1$, dog er der stadig mulighed for løsninger\\
+				Dermed vil det kun være en multiplikativ invers hvis $gcd(a,m)=1$, dog kan der stadig vaere muligheder.\\
 				Euklids algoritmen kan her bruges til at finde multiplikative invers.\\
 				
 			\subsection{Primtal}
-				$p\in mathbb{Z}^+-{1}$ hvis $\forall a|p | a\in \mathbb{Z} = {1,p}$ er $p$ et primtal. Ellers er det sammensat.\\
+				$p\in \mathbb{Z}^+-{1}$ hvis $\forall a|p \;|\; a\in \mathbb{Z} = {1,p}$ er $p$ et primtal. Ellers er det sammensat.\\
 				Et hvert tal $n\geq 2$ har en måde hvor det er produktet af primtal, kaldet primtals faktore\\
 			\subsubsection{greatest common divider}
 				def. $gcd(a,b)=max\{d| d|a \land d|b\}$\\
-				Det kan også ses at $gcd$ af et tal er produktet af de primtals faktore de har tilfældes
+				Det kan også ses at $gcd$ af et tal er produktet af de primtals faktore de har tilfældes\\
 				Hvis $gcd(a,b)=1$ er $a$ og $b$ indbyrdes primiske (relatively prime).
 			\subsubsection{Least common multiplum}
 				def. $lcm(a,b)=min\{m| a|m \land b|m\}$\\
@@ -971,7 +993,7 @@
 			\end{align*}
 		\subsection{Kinessisk Restklasse}
 			For $a_1,a_2,...,a_n \in \mathbb{Z}$\\
-			Hvor $m_1,m_2,...m_n \in \mathbb{Z}^+-{1}$ som er parvis indbyrdisk primiske\\
+			Hvor $m_1,m_2,...m_n \in \mathbb{Z}^+$ som er parvis indbyrdisk primiske\\
 			Vil \begin{align*}
 				x&\equiv a_1 \;(mod\;m_1)\\
 				x&\equiv a_2\; (mod\;m_2)\\
@@ -1415,6 +1437,7 @@
 			\item Svagt sammenhængende - Bruger underliggende graf
 			\item Stærk sammenhængende - Her skal stien tage højde for orienterende
 		\end{itemize}
+		For en stærk sammenhængende graf skal punkter i et komponent være sammenhængende til alle andre punkter i komponentet.\\
 		$\begin{tikzpicture}[scale=3]
 			\tikzstyle{vertex}=[circle,draw=black]
 			\node[vertex](v1) at (0,0){1};
@@ -1545,7 +1568,7 @@ for i=1 to 20
 			\sum\limits_{i=1}^{20}\sum\limits_{j=1}^ij&=\sum\limits_{i=1}^{20}\frac{i(i+1)}{2}\\
 								  &=\frac{1}{2}(\sum\limits_{i=1}^{20}(i^2+i))\\
 								  &=\frac{1}{2}(\sum\limits_{i=1}^{20}i^2+\sum\limits_{i=1}^{20}i)\\
-								  &=\frac{1}{2}(\frac{20\cdot 21\cdot 41}{6}+\frac{20(20+1)}{2})\\
+								  &=\frac{1}{2}(\frac{20\cdot 21\cdot (2\cdot 20+1)}{6}+\frac{20(20+1)}{2})\\
 								  &=1540
 		\end{align*}
 		Ved $i^2$ kunne en tabel fra s.176 i bogen bruges.
@@ -1579,13 +1602,15 @@ for i=1 to 20
 			\item $\{a_n\}$ er begrænset ovenfra af $M$
 			\item $M$ er en øvre grænse for $\{a_n\}$
 		\end{itemize}
+		Når n er 1,2,3,4,...\\
 		Hvis $\{a_n\}$ er begrænset både ovenfra og nedenfra er den bægrenset.\\[4mm]
 		Hvis alle elementer er større eller lig med 0 er den positiv\\
 		Hvis den er mindre eller lig med 0 er den negativ.\\
 		Hvis alle elementer $a_{n+1}\geq a_n$ er den voksende\\
 		Hvis alle elementer $a_{n+1}\leq a_n$ er den aftagende\\
 		Hvis ikke den vokser eller aftager er den monoton\\
-		hvis alle elementer $a_na_{n=1}<0$ er den alternerende, dvs skiftende mellem positiv og negativ
+		Hvis alle elementer $a_na_{n=1}<0$ er den alternerende, dvs skiftende mellem positiv og negativ\\
+		En følge kan være ultimativ egenskab som betyder at den efter et punkt n, vil have den givende egenskab såsom ultimativ positiv eller ultimativ begrænset.
 	\subsection{Konvergens}
 		Hvis en række går mod en given værdi når rækken bliver uendelig.\\
 		$\forall \epsilon > 0: \exists N \in \mathbb{Z}:\forall n \geq N: |a_n-L|<\epsilon$\\
