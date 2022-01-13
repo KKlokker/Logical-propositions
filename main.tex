@@ -302,20 +302,19 @@
 				For en funktion $f(x)=x^4-x^2-1$ vides det at når x er 0 er y -1 og ved x er 2 er y 11 og da den er kontinuer vil der være et nul punkt imellem.
 			\subsection{Induktions bevis}
 				Bevis $P(n)$ for alle $n\geq m$\\
-				Basis: bevis $P(m)$\\
+				Basis: $n_0 \geq m_0$\\ 
 				Induktionsskridt: Bevis at $P(k)\rightarrow P(k+1)$ for alle $k\geq m$\\
 				Induktionsantagelse: $P(k)$
 			\subsection{Stærkt induktion}
-				Basis: Bevis $P(m), P(m+1),...,P(m+l), l\geq 0$\\
-				Induktionsskridt: Bevis $P(m)\land P(m+1)\land ... \land P(k)\rightarrow P(k+1)$, for alle $k\geq m+l$\\
+				Basis: $P(m), P(m+1),...,P(m+l), l\geq 0$\\
+				Induktionsskridt: $P(m)\land P(m+1)\land ... \land P(k)\rightarrow P(k+1)$, for alle $k\geq m+l$\\
 				Eks. \\
 				Bevis $f_n>\phi^{n-2},n\geq 3$\\
 				\begin{align*}
 					\phi^2&=(\frac{1+\sqrt{5}}{2})^2=\frac{1+5+2\sqrt{5}}{4}=\frac{3+\sqrt{5}}{2}=1+\frac{1+\sqrt{5}}{2}\\
-					\phi\approx 1.618
-					\phi^2&=1+\phi
-					\text{Basis}\\
-					f_3&=2\\
+					\phi\approx 1.618\\
+					\phi^2&=1+\phi\\
+					\text{Basis}:\;f_3&=2\\
 					\phi^{3-2}&=\phi<f_3\\
 					f_4&=3\\
 					\phi^{4-2}&=1+\phi<f_4\\[4mm]
@@ -334,7 +333,7 @@
 					Bevis for at $S_n=S_{n-1}\cup \{x+y|x,y\in S_{n-1}\}, n \geq 2$ hvor mængden er kaldet $S$ er lig med mængden $A=\{3n|n\in\mathbb{Z}^+\}$\\
 					Bevis med simpel induktion at $A\subseteq S$:\\
 					\begin{align*}
-						\text{Basis:}& 3\cdot 1 \in S_1\ \subseteq S
+						\text{Basis:}&\; 3\cdot 1 \in S_1\ \subseteq S\\
 						\text{Ind. ant:}&\;3k\in s, \text{for et }\; k\geq 1\\
 						\text{Ind. skridt: For}&\; k\geq 1 \; \text{gælder}\\
 						3(k+1)&=3k+3 &&\text{begge i S}\\
@@ -342,14 +341,14 @@
 					\end{align*}
 					Dermed er alle multiple i $S$ dermed skal det blot vises at $S\subseteq A$ med strukturel induktion.
 					\begin{align*}
-						\text{Basis:}& S_1 \subseteq A\\
+						\text{Basis:}\;& S_1 \subseteq A\\
 						\text{Ind. ant:}&\;S_k\subseteq A\\
 						\text{Ind. skridt: For}&\; S_k \subseteq A \rightarrow S_{k+1}\subseteq A:\\
 						S&\in S_{k+1}-S_k\\
 						S&=x+y, x,y\in S_k && \text{ifølge rek. skridt}\\
 						S&=3a+3b, a,b\in \mathbb{Z}^+&&\text{ifølge ind. ant.}\\
-						S=3(a+b), a+b\in\mathbb{Z}^+\\
-						S\in A
+						S&=3(a+b), a+b\in\mathbb{Z}^+\\
+						S&\in A
 					\end{align*}
 		\section{Mængder} 
 			En mængde/set er en uordnet samling af forskellige objekter kaldet elementer\\
@@ -370,17 +369,18 @@
 				\end{align*}
 				$|$ = "hvorom der gælder"\\
 				$\emptyset = \{\}$\\
+			\subsection{Delmængde}
+				Delmængde $A\subset B$ $A=\{1,2\}$ $B=\{1,2,3,4\}$\\
+				$\subseteq$ bruges hvis mængderne også må være lig hinanden. En ægte delmængde er en delmængde som ikke er lig med.\\
+		  		$\subset \iff A\subseteq B \land A\neq B$
+		  		\begin{align*}
+			  		\emptyset \subseteq A\\
+			  		\forall x \in \emptyset : x \in A\\
+			  		\forall x \in U : x\in \emptyset \rightarrow x \in A
+		  		\end{align*}
 			\subsection{Kardinalitet}
 				Kardinaliteten er mængden af unikke elementer i en liste\\
 				$|\{2,2,4,6,4\}|=3$\\
-				Delmængde $A\subset B$ $A=\{1,2\}$ $B=\{1,2,3,4\}$\\
-				$\subseteq$ bruges hvis mængderne også må være lig hinanden. En ægte delmængde er en delmængde som ikke er lig med.\\
-				$\subset \iff A\subseteq B \land A\neq B$
-				\begin{align*}
-					\emptyset \subseteq A\\
-					\forall x \in \emptyset : x \in A\\
-					\forall x \in U : x\in \emptyset \rightarrow x \in A
-				\end{align*}
 			\subsection{Potensmængde}
 				Potensmængden er alle mængder som er delmængder eller lig med mængden.\\
 				\begin{align*}
@@ -420,7 +420,7 @@
 				\begin{minipage}{0.45\textwidth}
 				$A\cup B = \{x|x\in A \lor x \in B\}$\\
 				$A\cup B = \{1,2,3,4\}$\\[3mm]
-				$A\cup B = \;\text{Det hele blå felt} $
+				$A\cup B = A+B+Y$
 				\end{minipage}
 				\hfill
 				\begin{minipage}{0.45\textwidth}
@@ -493,7 +493,7 @@
 					\includegraphics[width=300px]{assets/setEq.png}
 				\end{center}
 				\subsubsection{De Morgans love}
-					$\overline{A\cap B} = \overline{A}\cup \overline{B}=u-(A\cap B)$\\
+					$\overline{A\cap B} = \overline{A}\cup \overline{B}=U-(A\cap B)$\\
 					$\overline{A\cup B} = \overline{A} \cap \overline{B}$\
 			\subsection{Ydeligere notation}
 				\begin{align*}
@@ -505,6 +505,7 @@
 			\section{Funktion}
 				En funktion er en translation af elementer fra en definitionsmængde, hvor hvert element i A har en tilsvarende element i B.\\
 				Defintionsmængde $Dm(f)$\\
+				Dispositionsmængde Overmængden som definitionsmængden afbilder\\
 				Værdimængde 
 				\begin{align*}
 					Vm(f)&={y\in B \ \exists x \in A: f(x)=y}\\
@@ -544,7 +545,7 @@
 					Mængden $Q = {\frac{p}{q}|p,q\in \mathbb{Z}}$ er en tællelig mængde.\\
 					Da der blot mappes en sammenhæng hvor alle $\mathbb{Z}$ kan mappes på tæller og nævner, således alle rationelle tal kan opstå og dermed er $\aleph_0$.
 				\subsection{Overtællelige mængder}
-					Realle tal $\mathbb{R}$ er en overtællelig mængde og kan vises via argumentet. At selv ved delmængden mellem 0 og 1 vil et nyt decimal altid kunne findes ved at age diagonalen af allerede nævnte realle tal.
+					Realle tal $\mathbb{R}$ er en overtællelig mængde og kan vises via argumentet. At selv ved delmængden mellem 0 og 1 vil et nyt decimal altid kunne findes ved at tage diagonalen af allerede nævnte realle tal.
 			\section{Relationer}
 				Relationer bruges til at finde elementer som opfylder en relation i mængder.\\
 				Der er to typer af relationer kvartær og binære relationer. Binær er når der er en direkte relation, hvor kvartær har interne relationer.\\
